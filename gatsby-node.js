@@ -1,7 +1,34 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+/* eslint-disable array-callback-return */
+const path = require('path');
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  const queries = await graphql(`
+    query {
+      publications: allNodePublications {
+        nodes {
+          id
+          title
+          path {
+            alias
+          }
+        }
+      }
+    }
+  `);
+
+  const {
+    publications,
+  } = queries.data;
+
+  publications.nodes.map(publicationData =>
+    createPage({
+      path: publicationData.path.alias,
+      component: path.resolve(`src/templates/publications.js`),
+      context: {
+        PostId: publicationData.id,
+      },
+    })
+  );
+};
