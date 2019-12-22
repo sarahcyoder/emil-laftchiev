@@ -1,0 +1,22 @@
+.card {
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: .5rem;
+  overflow: hidden;
+  height: 200px;
+  text-overflow: ellipsis;
+  background: #ffffff;
+  margin: .5rem auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 45%;
+  }
+}
