@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import Layout from '../components/layout'
+
 const Publications = ({ data }) => {
   const post = data.nodePublications;
-  console.log(post);
+
   return (
-   post.title
+    <Layout title={post.title}>
+      <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>
+    </Layout>
   );
 };
 
