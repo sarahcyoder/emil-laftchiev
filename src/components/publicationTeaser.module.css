@@ -4,15 +4,36 @@
   width: 100%;
   vertical-align: top;
   padding: .5rem;
-  overflow: hidden;
-  height: 200px;
-  text-overflow: ellipsis;
+  height: 250px;
   background: #ffffff;
-  margin: .5rem auto;
+  margin: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 5px 10px #fafafa;
 }
 
 .link {
   text-decoration: none;
+  color: #090909;
+}
+
+.title {
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+}
+
+.cta {
+  vertical-align: bottom;
+  position: absolute;
+  bottom: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #015668;
 }
 
 @media (min-width: 900px) {

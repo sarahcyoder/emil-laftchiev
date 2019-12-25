@@ -5,12 +5,15 @@ import containerStyles from './publicationTeaser.module.css';
 
 const PublicationTeaser = ({ article }) => {
 
+  const teaserText = article.body.processed;
+  const clippedText = teaserText.substr(0, 120) + "\u2026</p>";
+
   return (
     <div className={containerStyles.card}>
       <Link className={containerStyles.link} to={article.path.alias}>
-        <h3>{article.title}</h3>
-        <div className={containerStyles.body} dangerouslySetInnerHTML={{ __html: article.body.processed }}></div>
-        <span>Read More</span>
+        <h3 className={containerStyles.title}>{article.title}</h3>
+        <div className={containerStyles.body} dangerouslySetInnerHTML={{ __html: clippedText }}></div>
+        <div className={containerStyles.cta}>Read More</div>
       </Link>
     </div>
   );

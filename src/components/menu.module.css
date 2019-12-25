@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.45rem;
+}
+
+.container a {
+  padding: 10px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

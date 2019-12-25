@@ -5,11 +5,12 @@ import Header from "./header"
 import "./layout.css"
 import Menu from "./menu"
 
-const Layout = ({ children, title, height }) => {
+const Layout = ({ children, title, height, background }) => {
+  const backgroundImage = 'url(' + background + ')';
 
   return (
     <>
-      <Header title={title} height={height} />
+      <Header title={title} height={height} background={backgroundImage}/>
       <Menu />
       <div
         style={{
@@ -20,10 +21,10 @@ const Layout = ({ children, title, height }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+      </div>
+      <footer>
           © {new Date().getFullYear()}
         </footer>
-      </div>
     </>
   )
 }
@@ -31,12 +32,14 @@ const Layout = ({ children, title, height }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired
+  height: PropTypes.string.isRequired,
+  background: PropTypes.string,
 }
 
 Layout.defaultProps = {
   title: null,
   height: "25vh",
+  background: "#015668"
 }
 
 export default Layout
