@@ -12,6 +12,7 @@ const Publications = ({ data }) => {
       headerData={{
         title: post.title,
         height: '50vh',
+        link: window.location.pathname,
       }}  
     >
       <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>

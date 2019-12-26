@@ -32,7 +32,11 @@ const Header = ({ title, height, background, link }) => {
           style={{
             margin: `0 auto`,
             maxWidth: 960,
-            color: `#ffffff`
+            color: `#ffffff`,
+            position: `absolute`,
+            padding: `1.45rem`,
+            top: 0,
+            left: 0,
           }}>
           Emil Laftchiev
         </h2>

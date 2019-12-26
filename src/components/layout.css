@@ -239,7 +239,7 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h2 {
@@ -622,4 +622,7 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+#homepage h1 {
+  font-size: 4rem;
 }
