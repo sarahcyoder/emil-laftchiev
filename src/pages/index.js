@@ -8,7 +8,15 @@ export default ({ data }) => {
   const publications = data.allNodePublications;
   const heroImage = data.hero.nodes[0].publicURL;
   
-  return (<Layout title="Portfolio" height="75vh" background={heroImage} link="/#portfolio">
+  return (
+    <Layout
+      headerData={{
+        title: 'Portfolio',
+        height: '80vh',
+        background: heroImage,
+        link: '/#portfolio',
+      }}  
+    >
     <SEO title="Home" />
     <h2>Machine Learning, Predictive Modeling, Time Series</h2>
     <p>Emil Laftchiev currently works in the Data Analytics group at Mitsubishi Electric Research Laboratories. Emil's research focuses on Machine Learning, Data Mining techniques in anomaly detection, time series analytics, and predictive modeling. His most recent publication is 'An IoT system to estimate personal thermal comfort'.</p>

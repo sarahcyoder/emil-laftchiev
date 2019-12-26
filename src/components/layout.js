@@ -5,12 +5,11 @@ import Header from "./header"
 import "./layout.css"
 import Menu from "./menu"
 
-const Layout = ({ children, title, height, background, link }) => {
-  const backgroundImage = 'url(' + background + ')';
-
+const Layout = ({ children, headerData }) => {
+  
   return (
     <>
-      <Header title={title} height={height} background={backgroundImage} link={link}/>
+      <Header {...headerData} />
       <Menu />
       <div
         style={{
@@ -31,17 +30,11 @@ const Layout = ({ children, title, height, background, link }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
-  background: PropTypes.string,
-  link: PropTypes.string,
-}
+  headerData: PropTypes.object,
+};
 
 Layout.defaultProps = {
-  title: null,
-  height: "25vh",
-  background: "#015668",
-  link: window.location.pathname,
-}
+  headerData: {},
+};
 
 export default Layout
