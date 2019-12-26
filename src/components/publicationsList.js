@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import PublicationTeaser from '../components/publicationTeaser'
 
-const PublicationsList = ({ data }) => {
+const PublicationsList = ({ data, id }) => {
 
   return (
-    <div>
+    <div id={id}>
       {data &&
         data.nodes.map(node => {
           return <PublicationTeaser key={node.title} article={node} />;;
@@ -17,6 +17,11 @@ const PublicationsList = ({ data }) => {
 
 PublicationsList.propTypes = {
   data: PropTypes.object.isRequired,
+  id: PropTypes.string,
 };
+
+PublicationsList.defaultProps = {
+  id: null,
+}
 
 export default PublicationsList;

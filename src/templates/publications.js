@@ -8,7 +8,7 @@ const Publications = ({ data }) => {
   const post = data.nodePublications;
 
   return (
-    <Layout title={post.title}>
+    <Layout title={post.title} height="50vh">
       <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>
     </Layout>
   );
