@@ -623,6 +623,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
-#homepage h1 {
+#homepage h1,
+#contact-page h1 {
   font-size: 4rem;
 }

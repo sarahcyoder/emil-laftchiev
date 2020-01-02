@@ -44,8 +44,11 @@ const Header = ({ title, height, background, link }) => {
           margin: 0,
           position: `absolute`,
           top: `55%`,
-          left: `50%`,
-          transform: `translate(-50%, -50%)`,
+          left: 0,
+          right: 0,
+          textAlign: `center`,
+          width: `100%`,
+          padding: `0 230px`
         }}>
           <Link
             to={link}
