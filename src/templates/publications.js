@@ -15,7 +15,17 @@ const Publications = ({ data }) => {
         link: window.location.pathname,
       }}  
     >
+      <div>{post.field_date_published}</div>
       <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>
+      <div>
+        <a
+          href={post.field_publication_url.uri}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read Full Text
+        </a>
+      </div>
     </Layout>
   );
 };
@@ -32,6 +42,10 @@ export const query = graphql`
       body {
         processed
       }
+      field_publication_url {
+        uri
+      }
+      field_date_published(formatString: "MMMM YYYY")
     }
   }
 `;

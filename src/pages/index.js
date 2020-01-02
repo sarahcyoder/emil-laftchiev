@@ -30,7 +30,8 @@ export default ({ data }) => {
 export const data = graphql`
   {
     allNodePublications(
-      sort: { fields: created, order: DESC }
+      sort: {fields: field_date_published, order: DESC}
+      limit: 6
     ) {
       nodes {
         id
