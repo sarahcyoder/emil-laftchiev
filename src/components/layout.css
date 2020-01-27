@@ -24,7 +24,7 @@ summary {
 }
 footer {
   width: 100%;
-  background-color: #015668;
+  background-color: #1b2a49;
   color: #ffffff;
   padding: 2rem;
 }
@@ -626,4 +626,16 @@ pre tt:after {
 #homepage h1,
 #contact-page h1 {
   font-size: 4rem;
+}
+
+#homepage #button {
+  text-align: center;
+}
+
+#homepage #button a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #1b2a46;
 }

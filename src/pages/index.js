@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from 'gatsby';
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PublicationsList from "../components/publicationsList"
@@ -6,22 +8,25 @@ import PublicationsList from "../components/publicationsList"
 export default ({ data }) => {
 
   const publications = data.allNodePublications;
-  const heroImage = data.hero.nodes[0].publicURL;
+  //const heroImage = data.hero.nodes[0].publicURL;
   
   return (
     <div id="homepage">
       <Layout
         headerData={{
-          title: 'Portfolio',
+          title: 'Big Data Analytics',
+          subTitle: 'Machine Learning, Predictive Modeling, Time Series',
           height: '85vh',
-          background: heroImage,
+          color: '#1b2a46',
           link: '/#portfolio',
         }}  
       >
       <SEO title="Home" />
-      <h2>Machine Learning, Predictive Modeling, Time Series</h2>
-      <p>Emil Laftchiev currently works in the Data Analytics group at Mitsubishi Electric Research Laboratories. Emil's research focuses on Machine Learning, Data Mining techniques in anomaly detection, time series analytics, and predictive modeling. His most recent publication is 'An IoT system to estimate personal thermal comfort'.</p>
+      <h2>Principal Research Scientist</h2>
+      <p>Emil currently works in the Data Analytics group at Mitsubishi Electric Research Laboratories. Emil's research focuses on machine learning, data mining techniques in anomaly detection, time series analytics, and predictive modeling.</p>
+      <p>Here are some of his most recent publications.</p>
       <PublicationsList id="portfolio" data={publications}></PublicationsList>
+      <div id="button"><Link to='/publications'>View All Publications</Link></div>
     </Layout>
   </div>
   )
@@ -31,7 +36,7 @@ export const data = graphql`
   {
     allNodePublications(
       sort: {fields: field_date_published, order: DESC}
-      limit: 6
+      limit: 4
     ) {
       nodes {
         id
