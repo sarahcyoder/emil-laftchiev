@@ -1,8 +1,20 @@
 a {
   text-decoration: none;
-  color: #000000;
+  color: #465881;
 }
 
 h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.email {
+  font-size: 3.5rem;
+}
+
+.linkedin {
   font-size: 3rem;
 }
