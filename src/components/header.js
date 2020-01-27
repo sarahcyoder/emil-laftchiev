@@ -7,7 +7,7 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-const Header = ({ title, height, background, link }) => {
+const Header = ({ title, subTitle, height, background, color, link }) => {
   const backgroundImage = 'url(' + background + ')';
 
   return (
@@ -18,7 +18,7 @@ const Header = ({ title, height, background, link }) => {
         marginBottom: `1.45rem`,
         height: height,
         position: `relative`,
-        backgroundColor: `#015668`,
+        backgroundColor: color,
       }}
     >
       <div
@@ -40,26 +40,34 @@ const Header = ({ title, height, background, link }) => {
           }}>
           Emil Laftchiev
         </h2>
-        <h1 style={{
+        <div style={{
           margin: 0,
           position: `absolute`,
-          top: `55%`,
+          top: `50%`,
           left: 0,
           right: 0,
           textAlign: `center`,
           width: `100%`,
-          padding: `0 230px`
+          padding: `0 100px`
         }}>
-          <Link
-            to={link}
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {title}
-          </Link>
-        </h1>
+          <h1>
+            <Link
+              to={link}
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              {title}
+            </Link>
+          </h1>
+          <h2 style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}>
+            {subTitle}
+          </h2>
+        </div>
       </div>
     </header>
     </>
@@ -68,16 +76,20 @@ const Header = ({ title, height, background, link }) => {
 
 Header.propTypes = {
   title: PropTypes.string,
+  subTitle: PropTypes.string,
   height: PropTypes.string,
   image: PropTypes.string,
   link: PropTypes.string,
+  color: PropTypes.string,
 }
 
 Header.defaultProps = {
   title: null,
+  subTitle: null,
   height: "50vh",
-  background: "#015668",
+  background: "#1B2A49",
   link: window.location.pathname,
+  color: "#1B2A49",
 }
 
 export default Header
