@@ -8,7 +8,7 @@ import PublicationsList from "../components/publicationsList"
 export default ({ data }) => {
 
   const publications = data.allNodePublications;
-  //const heroImage = data.hero.nodes[0].publicURL;
+  const heroImage = data.hero.nodes[0].publicURL;
   
   return (
     <div id="homepage">
@@ -19,6 +19,7 @@ export default ({ data }) => {
           height: '85vh',
           color: '#1b2a46',
           link: '/#portfolio',
+          background: heroImage,
         }}  
       >
       <SEO title="Home" />
@@ -49,7 +50,7 @@ export const data = graphql`
         }
       }
     }
-    hero: allFile(filter: { absolutePath: { regex: "/nerve_cell/" } }) {
+    hero: allFile(filter: { absolutePath: { regex: "/web_banner/" } }) {
       nodes {
         publicURL
       }

@@ -8,7 +8,7 @@ import PublicationsList from "../components/publicationsList"
 export default ({ data }) => {
 
   const publications = data.allNodePublications;
-  //const heroImage = data.hero.nodes[0].publicURL;
+  const heroImage = data.hero.nodes[0].publicURL;
   
   return (
     <div id="homepage">
@@ -19,6 +19,7 @@ export default ({ data }) => {
           height: '85vh',
           color: '#1b2a46',
           link: '/publications/#publications',
+          background: heroImage,
         }}  
       >
       <SEO title="Home" />
@@ -45,7 +46,7 @@ export const data = graphql`
         field_date_published(formatString: "MMMM YYYY")
       }
     }
-    hero: allFile(filter: { absolutePath: { regex: "/web_banner/" } }) {
+    hero: allFile(filter: { absolutePath: { regex: "/time_series/" } }) {
       nodes {
         publicURL
       }

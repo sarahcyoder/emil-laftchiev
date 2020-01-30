@@ -13,13 +13,13 @@ export default ({data}) => {
       <Layout
         headerData={{
           title: 'Contact',
+          subTitle: 'Learn more about me, or start a conversation.',
           height: '70vh',
           link: '/contact',
           background: heroImage,
         }}  
       >
         <SEO title="Contact" />
-        <h2>Learn more about me, or start a conversation.</h2>
         <h3 className={containerStyles.email}><a href="mailto:emil.laftchiev@gmail.com">emil.laftchiev@gmail.com</a></h3>
         <h3 className={containerStyles.linkedin}>
           <a
