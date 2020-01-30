@@ -8,7 +8,6 @@ const Menu = () => {
     <div className={containerStyles.container}>
       <Link to='/'>Home</Link>
       <Link to='/publications'>Publications</Link>
-      <Link to='/'>Teaching</Link>
       <Link to='/contact'>Contact</Link>
     </div>
   );
