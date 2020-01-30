@@ -24,9 +24,10 @@ const Header = ({ title, subTitle, height, background, color, link }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
           padding: `1.45rem 1.0875rem`,
+          height: height,
         }}
+        id='overlay'
       >
         <h2
           style={{
@@ -43,7 +44,7 @@ const Header = ({ title, subTitle, height, background, color, link }) => {
         <div style={{
           margin: 0,
           position: `absolute`,
-          top: `50%`,
+          top: `40%`,
           left: 0,
           right: 0,
           textAlign: `center`,
