@@ -20,7 +20,7 @@ export default ({data}) => {
         }}  
       >
         <SEO title="Contact" />
-        <h3 className={containerStyles.email}><a href="mailto:emil.laftchiev@gmail.com">emil.laftchiev@gmail.com</a></h3>
+        <h3 className={containerStyles.email}><a href="mailto:emil.laftchiev@gmail.com">emil.laftchiev[@]gmail.com</a></h3>
         <h3 className={containerStyles.linkedin}>
           <a
             href="https://www.linkedin.com/in/emillaftchiev/"
