@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import containerStyles from "./header.module.css"
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
@@ -13,45 +14,25 @@ const Header = ({ title, subTitle, height, background, color, link }) => {
   return (
     <>
     <header
+      className={containerStyles.header}
       style={{
         backgroundImage: backgroundImage,
-        marginBottom: `1.45rem`,
         height: height,
-        position: `relative`,
         backgroundColor: color,
       }}
     >
       <div
         style={{
-          margin: `0 auto`,
-          padding: `1.45rem 1.0875rem`,
           height: height,
         }}
+        className={containerStyles.header}
         id='overlay'
       >
-        <h2
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            color: `#ffffff`,
-            position: `absolute`,
-            padding: `1.45rem`,
-            top: 0,
-            left: 0,
-          }}>
+        <h2 className={containerStyles.name}>
           Emil Laftchiev
         </h2>
-        <div style={{
-          margin: 0,
-          position: `absolute`,
-          top: `40%`,
-          left: 0,
-          right: 0,
-          textAlign: `center`,
-          width: `100%`,
-          padding: `0 100px`
-        }}>
-          <h1>
+        <div className={containerStyles.headerText}>
+          <h1 className={containerStyles.hero}>
             <Link
               to={link}
               style={{
@@ -62,10 +43,7 @@ const Header = ({ title, subTitle, height, background, color, link }) => {
               {title}
             </Link>
           </h1>
-          <h2 style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}>
+          <h2  className={containerStyles.subtitle}>
             {subTitle}
           </h2>
         </div>

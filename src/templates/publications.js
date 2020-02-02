@@ -10,20 +10,22 @@ const Publications = ({ data }) => {
   const post = data.nodePublications;
 
   return (
-    <Layout
-      headerData={{
-        title: post.title,
-        subTitle: post.field_date_published,
-        height: '75vh',
-        link: window.location.pathname
-      }}  
-    >
-      <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>
-      <div>
-        {post.field_publication_url ? <a className={containerStyles.cta} href={post.field_publication_url.uri} target='_blank' rel='noopener noreferrer'>Read Full Text</a> : null}
-        <Link className={containerStyles.cta} to='/publications'>See More Publications</Link>
-      </div>
-    </Layout>
+    <div className={containerStyles.publication}>
+      <Layout
+        headerData={{
+          title: post.title,
+          subTitle: post.field_date_published,
+          height: '80vh',
+          link: window.location.pathname
+        }}  
+      >
+        <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>
+        <div>
+          {post.field_publication_url ? <a className={containerStyles.cta} href={post.field_publication_url.uri} target='_blank' rel='noopener noreferrer'>Read Full Text</a> : null}
+          <Link className={containerStyles.cta} to='/publications'>See More Publications</Link>
+        </div>
+      </Layout>
+    </div>
   );
 };
 

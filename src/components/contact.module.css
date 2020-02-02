@@ -7,16 +7,14 @@ h1 {
   font-size: 3rem;
 }
 
-h2, h3 {
-  text-align: center;
-}
-
 .email {
   font-size: 1.15rem;
+  text-align: center;
 }
 
 .linkedin {
   font-size: 1.05rem;
+  text-align: center;
 }
 
 @media (min-width: 480px) {

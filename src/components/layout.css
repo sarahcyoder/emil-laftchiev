@@ -623,16 +623,16 @@ pre tt:after {
     font-size: 100%;
   }
 }
-#homepage h1,
-#contact-page h1 {
-  font-size: 4rem;
-}
 
-#homepage #button {
+#homepage h2 {
   text-align: center;
 }
 
-#homepage #button a {
+#homepage .button {
+  text-align: center;
+}
+
+#homepage .button a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   padding: 10px;
@@ -648,4 +648,16 @@ pre tt:after {
   bottom: 0;
   background-color: rgba(0,0,0,0.6); /* Black background with opacity */
   z-index: 0;
+}
+
+@media (min-width: 400px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1000px) {
+
 }

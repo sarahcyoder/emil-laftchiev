@@ -41,7 +41,7 @@ export default ({ data }) => {
         international counterparts in Japan.</p>
       <p>Here are some of my most recent publications.</p>
       <PublicationsList id="portfolio" data={publications}></PublicationsList>
-      <div id="button"><Link to='/publications'>View All Publications</Link></div>
+      <div className="button"><Link to='/publications'>View All Publications</Link></div>
     </Layout>
   </div>
   )

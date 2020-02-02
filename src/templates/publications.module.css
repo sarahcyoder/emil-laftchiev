@@ -1,9 +1,38 @@
 .cta {
-  vertical-align: bottom;
+  display: block;
+  width: 100%;
+  margin: 1rem 0 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   padding: 10px;
   border-radius: 3px;
   background-color: #1b2a46;
-  margin-right: 10px;
+  text-align: center;
+}
+
+.publication h1 {
+  font-size: 1.7rem;
+}
+
+@media (min-width: 400px) {
+  .publication h1 {
+    font-size: 2rem;
+  }
+  .cta {
+    display: inline;
+    vertical-align: bottom;
+    margin: 0 0.5rem 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .publication h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .publication h1 {
+    font-size: 3.2rem;
+  }
 }
