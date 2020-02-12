@@ -649,15 +649,3 @@ pre tt:after {
   background-color: rgba(0,0,0,0.6); /* Black background with opacity */
   z-index: 0;
 }
-
-@media (min-width: 400px) {
-
-}
-
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 1000px) {
-
-}

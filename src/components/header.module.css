@@ -7,21 +7,6 @@ header {
   margin: 0 auto;
 }
 
-.headerText {
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.hero {
-  font-size: 2.5rem;
-}
-
 .subtitle {
   color: white;
   text-decoration: none;
@@ -39,6 +24,20 @@ header {
   z-index: 2;
 }
 
+.headerText {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.hero {
+  font-size: 2.5rem;
+}
 @media (min-width: 400px) {
   .headerText {
     padding: 0 2rem;
@@ -46,11 +45,11 @@ header {
 }
 
 @media (min-width: 768px) {
-  .hero {
-    font-size: 3.2rem;
-  }
   .headerText {
     padding: 0 3rem;
+  }
+  .hero {
+    font-size: 3.2rem;
   }
 }
 
