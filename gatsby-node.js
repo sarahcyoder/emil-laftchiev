@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql }) => {
   publications.nodes.map(publicationData =>
     createPage({
       path: publicationData.path.alias,
-      component: path.resolve(`src/templates/publications.js`),
+      component: path.resolve(`src/templates/publicationPages.js`),
       context: {
         PostId: publicationData.id,
       },
