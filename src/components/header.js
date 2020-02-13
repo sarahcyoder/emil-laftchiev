@@ -3,12 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import containerStyles from "./header.module.css"
 
-if (typeof window !== "undefined") {
-  // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
-}
-
-const Header = ({ title, subTitle, height, background, color, link }) => {
+const Header = ({ title, subTitle, height, background, color }) => {
   const backgroundImage = 'url(' + background + ')';
 
   return (
@@ -32,17 +27,7 @@ const Header = ({ title, subTitle, height, background, color, link }) => {
           Emil Laftchiev
         </h2>
         <div className={containerStyles.headerText}>
-          <h1 className={containerStyles.hero}>
-            <Link
-              to={link}
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
-              {title}
-            </Link>
-          </h1>
+          <h1 className={containerStyles.hero}>{title}</h1>
           <h2  className={containerStyles.subtitle}>
             {subTitle}
           </h2>
@@ -58,7 +43,6 @@ Header.propTypes = {
   subTitle: PropTypes.string,
   height: PropTypes.string,
   image: PropTypes.string,
-  link: PropTypes.string,
   color: PropTypes.string,
 }
 
@@ -67,7 +51,6 @@ Header.defaultProps = {
   subTitle: null,
   height: "50vh",
   background: "#1B2A49",
-  link: window.location.pathname,
   color: "#1B2A49",
 }
 

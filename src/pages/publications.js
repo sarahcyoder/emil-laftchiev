@@ -18,7 +18,6 @@ export default ({ data }) => {
           subTitle: "Emil's Published Papers",
           height: '85vh',
           color: '#1b2a46',
-          link: '/publications/#publications',
           background: heroImage,
         }}  
       >

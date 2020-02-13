@@ -18,7 +18,6 @@ export default ({ data }) => {
           subTitle: 'Machine Learning, Predictive Modeling, Time Series',
           height: '85vh',
           color: '#1b2a46',
-          link: '/#portfolio',
           background: heroImage,
         }}  
       >

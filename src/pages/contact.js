@@ -14,7 +14,6 @@ export default ({data}) => {
         title: 'Contact',
         subTitle: 'Learn more about me, or start a conversation.',
         height: '70vh',
-        link: '/contact',
         background: heroImage,
       }}  
     >

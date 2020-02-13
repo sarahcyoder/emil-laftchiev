@@ -16,7 +16,6 @@ const Publications = ({ data }) => {
           title: post.title,
           subTitle: post.field_date_published,
           height: '80vh',
-          link: window.location.pathname
         }}  
       >
         <div dangerouslySetInnerHTML={{ __html: post.body.processed }}></div>
