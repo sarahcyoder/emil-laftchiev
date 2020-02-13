@@ -37,7 +37,9 @@ header {
 
 .hero {
   font-size: 2.5rem;
+  color: #ffffff;
 }
+
 @media (min-width: 400px) {
   .headerText {
     padding: 0 2rem;
