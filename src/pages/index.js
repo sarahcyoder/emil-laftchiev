@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -28,7 +28,7 @@ export default ({ data }) => {
         These algorithms find applications in emerging technologies like the Internet
         of Things and wearable devices, and focus on learning user preferences, anomaly
         detection, and time series prediction. My current focus is on deep learning
-        methods of generative modeling such as VAEs and GANs as well as modern methods
+        methods of generative modeling such as VAEs, GANs, and INNs, as well as modern methods
         of time series analysis. Ongoing themes of my research include time series
         pattern matching, anomaly detection, machine learning for big data, and
         predictive modeling.</p>
