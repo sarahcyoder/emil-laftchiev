@@ -22,22 +22,9 @@ export default ({ data }) => {
         }}  
       >
       <SEO title="Home" />
-      <h2>Emil Laftchiev, Principal Research Scientist</h2>
-      <p>I am a machine learning scientist at MERL. I work with time series data,
-        envisioning and creating machine learning and computer science algorithms.
-        These algorithms find applications in emerging technologies like the Internet
-        of Things and wearable devices, and focus on learning user preferences, anomaly
-        detection, and time series prediction. My current focus is on deep learning
-        methods of generative modeling such as VAEs, GANs, and INNs, as well as modern methods
-        of time series analysis. Ongoing themes of my research include time series
-        pattern matching, anomaly detection, machine learning for big data, and
-        predictive modeling.</p>
-      <p>At MERL I am involved in directing the research direction by proposing and
-        executing new projects, maintaining state-of-the-art knowledge in machine
-        learning, publishing new algorithms and findings in competitive academic
-        venues, patenting applications relevant to the business, developing prototypes
-        for demonstration to senior management, and transferring knowledge to my
-        international counterparts in Japan.</p>
+      <h2>Emil Laftchiev, Senior Machine Learning Scientist</h2>
+      <p>I am a senior machine learning scientist. I work with data to envision and create machine learning and computer science algorithms (also known as AI algorithms).</p>
+      <p> In my career these algorithms have found applications in recommendation systems, industrial systems, vehicle mapping and the Internet of Things. I work with text, image, and time series data from an array of sources including product catalogs, industrial devices and wearable devices. My work primarily focuses on recommendation, learning user preferences, anomaly detection, and time series prediction.</p>
       <p>Here are some of my most recent publications.</p>
       <PublicationsList id="portfolio" data={publications}></PublicationsList>
       <div className="button"><Link to='/publications'>View All Publications</Link></div>
